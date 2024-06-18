@@ -8,13 +8,14 @@
     <title>Document</title>
 
     <style>
-        body{
+        body {
             text-align: center;
             margin: 0px;
             padding: 0px;
             overflow-x: hidden;
         }
-        h1{
+
+        h1 {
             background-color: #1B88F5;
             font-family: Georgia, 'Times New Roman', Times, serif;
             color: white;
@@ -23,115 +24,120 @@
             margin-top: 0%;
             width: 96%;
         }
-        form{
+
+        form {
             background-color: white;
             font-size: 21px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
         }
-        input{
+
+        input {
             border-color: #1B88F5;
             font-size: 17px;
         }
-        input[type=text], input[type=date], input[type=number] {
-            
+
+        input[type=text], 
+        input[type=date], 
+        input[type=number] {
             text-align:center;
-            width:50%;
+            width: 50%;
             padding: 7px 15px;
             margin: 4px 0px 40px 0px;
             box-sizing: border-box;
         }
+
         select {
             width: 50%;
             text-align: center;
             font-size: 17px;
             padding: 7px 15px;
-            border:2px solid #1B88F5;
+            border: 2px solid #1B88F5;
             border-style: inset;
             margin: 4px 0px 40px 0px;
         }
-        button{
+
+        button {
             background-color: #1B88F5;
-            border:1px solid #0f59a2f1;
-            color:white;
+            border: 1px solid #0f59a2f1;
+            color: white;
             font-size: 16px;
             border-radius: 4px;
             padding: 5px 6px;
             box-shadow: 2px 5px 20px #1B88F5;
             margin: 4px 0px 70px 0px;
         }
-        table{
-            border-collapse:collapse;
-            width:50%;
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
             margin: auto;
             }
-        th, td{
-            border:2px solid white;
-            padding:10px;
+        th, td {
+            border: 2px solid white;
+            padding: 10px;
         }
-        th{
+        th {
             color: white;
             background-color: #1B88F5;
         }
-        tr:nth-child(odd){
+        tr:nth-child(odd) {
             background-color: #6eaff182;
         }
-        tr:nth-child(even){
+        tr:nth-child(even) {
             background-color: #97cafd72;
-        }
-        td{
+        } 
+        td {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
             padding: 7px;
         }
 
-        /* .otherGameVisible {
-            display: block;
-            text-align:center;
-            width:50%;
-            padding: 7px 15px;
-            margin: 4px 0px 40px 0px;
-            box-sizing: border-box;
-         } */
+        .inputContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+          }
     </style>
 </head>
 <body>
-    <h1>Gameinfluencer marketing campaign</h1><br>
+    <h1>Gameinfluencer marketing campaign</h1>
     <form id="form" action="" method="post">
-        <label for="name">Campaign name (up to 20 characters)</label><br>
-        <input type="text" id="name" name="name" maxlength="20" required><br>
-        <label for="description">Campaign description (up to 200 characters)</label><br>
-        <input type="text" id="description" name="description" maxlength="200" required><br>
-        <label for="game"></label>
-        <label for="game">Campaing Game</label><br>
-        <select id="game" name="game"><br>
-            <option value="League of Legends">League of Legends</option><br>
-            <option value="DOTA 2">DOTA 2</option><br>
-            <option value="Minecraft">Minecraft</option><br>
-            <option value="Fortnite">Fortnite</option><br>
-            <option value="Apex Legends">Apex Legends</option><br>
-            <option value="Other">Other</option><br>
-        </select><br>
-        <input type="text" id="otherGame" name="otherGame" style="display: none;"><br>
-        <label for="start">Start date</label><br>
-        <input type="date" id="start" name="start"><br>
-        <label for="end">End date</label><br>
-        <input type="date" id="end" name="end"><br>
-        <label for="budget">Campaign budget(up tp 10 000 dollars)</label><br>
-        <input type="number" id="budget" name="budget" min="1" max="10 000" required><br>
-        <lable for="crypto">Can the campaign be paid with Crypto currency?</lable>
-        <input id="txtsss" type="checkbox" id="crypto" name="crypto" style="margin: 4px 0px 40px 0px"><br>
-        <label for="language">Campaign language</label><br>
-        <select id="language" name="language"><br>
-            <option value="English">English</option><br>
-            <option value="German">German</option><br>
-            <option value="Spanish">Spanish</option><br>
-            <option value="Japanese">Japanese</option><br>
-        </select><br>
-        <button id="button" type="submit">Add Campaign</button>
+        <div class="inputContent">
+            <label for="name">Campaign name (up to 20 characters)</label>
+            <input type="text" id="name" name="name" maxlength="20" required>
+            <label for="description">Campaign description (up to 200 characters)</label>
+            <input type="text" id="description" name="description" maxlength="200" required>
+            <label for="game"></label>
+            <label for="game">Campaing Game</label>
+            <select id="game" name="game">
+                <option value="League of Legends">League of Legends</option>
+                <option value="DOTA 2">DOTA 2</option>
+                <option value="Minecraft">Minecraft</option>
+                <option value="Fortnite">Fortnite</option>
+                <option value="Apex Legends">Apex Legends</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" id="otherGame" name="otherGame" style="display: none;">
+            <label for="start">Start date</label>
+            <input type="date" id="start" name="start">
+            <label for="end">End date</label>
+            <input type="date" id="end" name="end">
+            <label for="budget">Campaign budget(up tp 10 000 dollars)</label>
+            <input type="number" id="budget" name="budget" min="1" max="10000" required>
+            <lable for="crypto">Can the campaign be paid with Crypto currency?</lable>
+            <input id="txtsss" type="checkbox" id="crypto" name="crypto" style="margin: 4px 0px 40px 0px">
+            <label for="language">Campaign language</label>
+            <select id="language" name="language">
+                <option value="English">English</option>
+                <option value="German">German</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Japanese">Japanese</option>
+            </select>
+            <button id="button" type="submit">Add Campaign</button>
+        </div>
     </form>
 
     <table>
         <thead>
-
             <tr>
                 <th>Campaign name</th>
                 <th>Campaign Game</th>
@@ -141,25 +147,20 @@
             </tr>
         </thead>
 
-        <tbody id="tbody">
-
-        </tbody>
-
+        <tbody id="tbody"></tbody>
     </table>
     
-    <p id="demo"></p>
     <script>
-        
         const gameInput=document.getElementById("game");
         gameInput.addEventListener("change", ()=>{
             const otherGame=document.getElementById("otherGame");
             if(gameInput.value === "Other"){
-                otherGame.style.display="block";
+                otherGame.style.display = "block";
             }
             else{
                 const gameInput = document.getElementById("game").value;
-                otherGame.style.display="none";
-            }
+                otherGame.style.display = "none";
+            }                
         });
 
         document.getElementById("form").addEventListener("submit", (e) => {
@@ -187,13 +188,9 @@
             dateCell.textContent = textInput[2];
             budgetCell.textContent = textInput[3];
             languageCell.textContent = textInput[4];
-    
-            
 
             const form = document.getElementById("form").reset();
-
         });
-        
     </script>
 </body>
 </html>
